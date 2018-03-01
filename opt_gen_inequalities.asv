@@ -38,11 +38,12 @@ if utility_exists == 1
 end
 
 %% Limiting Import and Export
-
-import_limit = 500 % kWh
-Constraints=[Constraints, import <= import_limit];
  
 export_limit = 500 % kWh
+import_limit = 500 % kWh
+
+Constraints=[Constraints, import <= import_limit];
+ 
 Constraints=[Constraints, export_grid <= export_limit];
  
 %% ldn 08/02/2017

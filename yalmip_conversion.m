@@ -4,6 +4,7 @@ if convert_yalmip == 1
     %% Utility Variables
     if isempty(utility_exists) == 0
         import=value(import);
+        export_grid = value(export_grid);
         nontou_dc=value(nontou_dc);
         onpeak_dc=value(onpeak_dc);
         midpeak_dc=value(midpeak_dc);
