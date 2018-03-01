@@ -87,11 +87,10 @@ end
 %% Date and endpts information
 %%%Date vectors for all time stamps
 datetimev=datevec(time);
-%%%Determining endpoints for all months - end pt is the data entry for a
-%%%month
+%%%Determining endpoints for all months - end pt is the (last) data entry for a given month
 counter=1;
 for i=2:length(time)
-    if datetimev(i,2)~=datetimev(i-1,2)
+    if datetimev(i,2)~=datetimev(i-1,2) %looks at second colum of datevec(month) 
         endpts(counter,1)=i-1;
         counter=counter+1;
     end

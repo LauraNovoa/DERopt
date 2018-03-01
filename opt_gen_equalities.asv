@@ -11,8 +11,7 @@ else
     vc_cop=zeros(length(cooling),1);
 end
 
-Constraints=[];
-Constraints= [import + sum(dghr_elec,2) + sum(ees_dchrg,2) + sum(pv_elec,2) == elec(1:endpts(length(endpts)),2) + sum(vc_cop.*vc_cool,2) + sum(ees_chrg,2) + export_grid ];
+Constraints = [import + sum(dghr_elec,2) + sum(ees_dchrg,2) + sum(pv_elec,2) == elec(1:endpts(length(endpts)),2) + sum(vc_cop.*vc_cool,2) + sum(ees_chrg,2) + export_grid];
 
 %% (ldn) Net Zero
 %Constraints=[Constraints
